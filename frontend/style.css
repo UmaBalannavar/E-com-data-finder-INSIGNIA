@@ -1,0 +1,238 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #f7faff 0%, #f0f2f8 100%);
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 28px 48px 12px 48px;
+  background: #fff;
+  border-bottom: 1px solid #e6eaf3;
+  box-shadow: 0 2px 8px rgba(60, 80, 120, 0.04);
+}
+header i {
+  font-size: 1.3em;
+  margin-right: 14px;
+  color: #4a90e2;
+  filter: drop-shadow(0 1px 1px #e6eaf3);
+}
+header span {
+  font-size: 1.13em;
+  font-weight: 600;
+  color: #232a32;
+  letter-spacing: 0.01em;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 32px auto 0 auto;
+  gap: 24px;
+}
+
+.card {
+  background: linear-gradient(120deg, #fff 80%, #f3f7fa 100%);
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(60, 80, 120, 0.08), 0 1.5px 4px rgba(60, 80, 120, 0.04);
+  padding: 36px 30px 30px 30px;
+  flex: 1 1 0;
+  min-width: 320px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border: 1.5px solid #e6eaf3;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+.card:hover {
+  box-shadow: 0 8px 32px rgba(60, 80, 120, 0.13), 0 2px 8px rgba(60, 80, 120, 0.07);
+  border: 1.5px solid #b3c6e0;
+}
+
+.card label {
+  font-size: 1em;
+  margin-bottom: 5px;
+  color: #3a3a3a;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.card input[type="text"],
+.card input[type="number"],
+.card select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  border: 1.5px solid #e6eaf3;
+  border-radius: 7px;
+  background: #fafdff;
+  font-size: 1em;
+  color: #232a32;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 2px rgba(60, 80, 120, 0.03);
+}
+.card input[type="text"]:focus,
+.card input[type="number"]:focus,
+.card select:focus {
+  border-color: #4a90e2;
+  outline: none;
+  background: #fff;
+  box-shadow: 0 0 0 2px #e3f0fc;
+}
+
+.card .checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.card .checkbox-group label {
+  font-size: 1em;
+  font-weight: 400;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0;
+  cursor: pointer;
+  transition: color 0.18s;
+}
+.card input[type="checkbox"] {
+  accent-color: #4a90e2;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(60, 80, 120, 0.04);
+  margin-right: 4px;
+}
+
+.card .upload-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.card .upload-section input[type="file"] {
+  display: none;
+}
+.card .upload-section label {
+  background: #f2f6fa;
+  border: 1.5px dashed #bfc8d2;
+  border-radius: 6px;
+  padding: 7px 16px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #4a90e2;
+  font-weight: 500;
+  transition: background 0.2s, border 0.2s;
+}
+.card .upload-section label:hover {
+  background: #eaf1fb;
+  border-color: #4a90e2;
+}
+
+.card button,
+.card input[type="button"] {
+  background: linear-gradient(90deg, #1d2024 0%, #0e1216 100%);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 13px 0;
+  font-size: 1.05em;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0 2px 8px rgba(60, 80, 120, 0.07);
+  transition: background 0.18s, box-shadow 0.18s, transform 0.12s;
+  letter-spacing: 0.01em;
+}
+.card button:hover,
+.card input[type="button"]:hover {
+  background: linear-gradient(90deg, #357abd 0%, #4a90e2 100%);
+  box-shadow: 0 4px 16px rgba(60, 80, 120, 0.13);
+  transform: translateY(-2px) scale(1.02);
+}
+.card button:disabled {
+  background: #bfc8d2;
+  color: #fff;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.csv-drop {
+  background: linear-gradient(120deg, #fafdff 80%, #f3f7fa 100%);
+  border: 1.5px dashed #bfc8d2;
+  border-radius: 9px;
+  min-height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  color: #7a8ba5;
+  font-size: 1.05em;
+  padding: 22px 0;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1.5px 4px rgba(60, 80, 120, 0.04);
+}
+.csv-drop.active {
+  border-color: #4a90e2;
+  box-shadow: 0 4px 16px rgba(74, 144, 226, 0.09);
+}
+.csv-drop i {
+  font-size: 2.1em;
+  margin-bottom: 6px;
+  color: #4a90e2;
+  filter: drop-shadow(0 1px 1px #e6eaf3);
+}
+
+footer {
+  text-align: center;
+  padding: 36px 0 22px 0;
+  color: #aab2c5;
+  font-size: 1em;
+  letter-spacing: 0.02em;
+  background: none;
+}
+
+.error-message {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  background: linear-gradient(90deg, #ff5e62 0%, #ff9966 100%);
+  color: white;
+  padding: 15px 22px;
+  border-radius: 7px;
+  box-shadow: 0 2px 8px rgba(255, 94, 98, 0.13);
+  z-index: 1000;
+  font-weight: 500;
+  font-size: 1.05em;
+  animation: slideIn 0.3s ease-out;
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1100px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  .card {
+    max-width: 95vw;
+    min-width: 240px;
+  }
+}
